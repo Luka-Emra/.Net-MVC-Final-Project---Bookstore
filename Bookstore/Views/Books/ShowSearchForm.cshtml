@@ -1,0 +1,21 @@
+﻿<h1 style="text-align: center;">Look up Desired Book Easily!</h1>
+<div class="logincontainer search">
+    <h1>Search For a Book</h1>
+    <hr />
+    @*<div class="d-flex align-items-center">*@
+    <form class="search-form" asp-action="ShowSearchResults">
+        <div class="form-group text-center">
+            <p>Search By Book Title or<br> By Word in the Title</p>
+            <label for="SearchPhrase" class="control-label"></label>
+            <input name="SearchPhrase" class="form-control" />
+        </div>
+        <div class="RegisterButton">
+            <input type="submit" value="Search" />
+        </div>
+    </form>
+    @*</div>*@
+    <div>
+        <a class="action" asp-action="Index">Back to List</a>
+    </div>
+</div>
+

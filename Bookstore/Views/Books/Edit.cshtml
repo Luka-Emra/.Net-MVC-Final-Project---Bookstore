@@ -1,0 +1,35 @@
+﻿@model Bookstore.Models.Book
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="logincontainer edit">
+    <h1>Edit</h1>
+    <h4>Book</h4>
+    <hr />
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Author" class="control-label"></label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="RegisterButton">
+                <input type="submit" value="Save"/>
+            </div>
+        </form>
+    <div>
+        <a class="action" asp-action="Index">Back to List</a>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
